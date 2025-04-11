@@ -1,0 +1,16 @@
+run = "python app.py"
+modules = ["python-3.11"]
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "gopi"]
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+exposeLocalhost = true
+
+[[ports]]
+localPort = 8080
+externalPort = 80
